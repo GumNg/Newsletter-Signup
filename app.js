@@ -21,6 +21,20 @@ app.post("/", function(req, res){
     let firstName = req.body.firstName;
     let lastName = req.body.lastName;
     let email = req.body.email;
+
+    let data = {
+        members: [
+            {
+                email_address: email,
+                status: "subscribed",
+                merge_fields: {
+                    FNAME: firstName,
+                    LNAME: lastName
+                }
+            }
+        ]
+
+    };
 });
 
 app.listen(3000, function() {
