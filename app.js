@@ -35,6 +35,8 @@ app.post("/", function(req, res){
         ]
 
     };
+
+    let jsonData = JSON.stringify(data);
 });
 
 app.listen(3000, function() {
