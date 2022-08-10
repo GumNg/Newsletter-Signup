@@ -6,6 +6,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+// path for static files insisde public folder
+app.use(express.static("public"));
+
 app.get("/", function(req, res) {
     res.sendFile(__dirname + ("/signup.html"));
 });
