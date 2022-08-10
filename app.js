@@ -18,11 +18,11 @@ app.get("/", function(req, res) {
 
 // post route to homepage
 app.post("/", function(req, res){
-    let firstName = req.body.firstName;
-    let lastName = req.body.lastName;
-    let email = req.body.email;
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const email = req.body.email;
 
-    let data = {
+    const data = {
         members: [
             {
                 email_address: email,
@@ -36,7 +36,7 @@ app.post("/", function(req, res){
 
     };
 
-    let jsonData = JSON.stringify(data);
+    const jsonData = JSON.stringify(data);
 });
 
 app.listen(3000, function() {
