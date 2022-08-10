@@ -11,8 +11,14 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+// get route to homepage
 app.get("/", function(req, res) {
     res.sendFile(__dirname + ("/signup.html"));
+});
+
+// post route to homepage
+app.post("/", function(req, res){
+    
 });
 
 app.listen(3000, function() {
