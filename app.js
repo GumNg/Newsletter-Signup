@@ -9,6 +9,8 @@ const app = express();
 // path for static files insisde public folder
 app.use(express.static("public"));
 
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.get("/", function(req, res) {
     res.sendFile(__dirname + ("/signup.html"));
 });
