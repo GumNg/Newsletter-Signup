@@ -18,7 +18,9 @@ app.get("/", function(req, res) {
 
 // post route to homepage
 app.post("/", function(req, res){
-    
+    let firstName = req.body.firstName;
+    let lastName = req.body.lastName;
+    let email = req.body.email;
 });
 
 app.listen(3000, function() {
