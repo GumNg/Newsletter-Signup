@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
+const { url } = require("inspector");
 
 
 const app = express();
@@ -38,6 +39,10 @@ app.post("/", function(req, res){
     };
 
     const jsonData = JSON.stringify(data);
+
+    https.request(url, options, function(response) {
+
+    });
 });
 
 app.listen(3000, function() {
