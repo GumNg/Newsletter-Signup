@@ -52,13 +52,14 @@ app.post("/", function (req, res) {
     } else {
       res.sendFile(__dirname + "/failure.html");
     }
-
+    // checks data from api server and log data after being parsed
     response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
   });
-
+  // use request and calls write to send jsonData to api server
   request.write(jsonData);
+  //   ends request
   request.end();
 });
 
