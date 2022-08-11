@@ -54,6 +54,8 @@ app.post("/", function(req, res){
         });
 
     });
+
+    request.write(jsonData);
 });
 
 app.listen(3000, function() {
