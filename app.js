@@ -67,7 +67,7 @@ app.post("/", function (req, res) {
 app.post("/failure", function (req, res) {
   res.redirect("/");
 });
-
-app.listen(3000, function () {
+// listen on dynamic port or local port 3000
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server is up and running on port 3000");
 });
