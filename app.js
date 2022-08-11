@@ -42,6 +42,12 @@ app.post("/", function(req, res){
 
     const url = "https://us12.api.mailchimp.com/3.0/lists/c2d3a63ec5";
 
+    const options = {
+        method: "POST",
+        auth: "gum1:"
+
+    };
+
     https.request(url, options, function(response) {
 
     });
@@ -50,9 +56,3 @@ app.post("/", function(req, res){
 app.listen(3000, function() {
     console.log("Server is up and running on port 3000");
 });
-
-// mailchimp api key
-// 3629ae6c1468408199e229846c96228f-us12
-
-// list id 
-// c2d3a63ec5
