@@ -62,6 +62,11 @@ app.post("/", function (req, res) {
   request.end();
 });
 
+// post route failure to redirect to homepage
+app.post("/failure", function(req, res){
+    res.redirect("/");
+});
+
 app.listen(3000, function () {
   console.log("Server is up and running on port 3000");
 });
